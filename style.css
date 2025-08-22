@@ -1,0 +1,384 @@
+/* Modern Contact Phone Book App Styles */
+
+/* Background and base styles */
+body {
+    background: linear-gradient(135deg, #0a3d91 0%, #1e90ff 100%);
+    color: #222;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Main container for centering content */
+#main-container, .main-container {
+    max-width: 430px;
+    margin: 40px auto 0 auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(10,61,145,0.18);
+    padding: 32px 20px 24px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* App header */
+header {
+    background: #0a3d91;
+    color: #fff;
+    text-align: center;
+    padding: 24px 0 16px 0;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 2px 12px rgba(10,61,145,0.10);
+    margin-bottom: 24px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+h2 {
+    color: #0a3d91;
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h5 {
+    color: #222;
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Table styling */
+#table {
+    margin: 0 auto 24px auto;
+    width: 100%;
+    background: #fff;
+    border-radius: 12px;
+    overflow-x: auto;
+    box-shadow: 0 2px 12px rgba(30,144,255,0.08);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    margin-bottom: 0;
+}
+
+th, td {
+    border: none;
+    padding: 14px 8px;
+    text-align: center;
+}
+
+th {
+    background: linear-gradient(90deg, #0a3d91 60%, #1e90ff 100%);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    border-radius: 8px 8px 0 0;
+}
+
+tr {
+    border-bottom: 1px solid #e3eefd;
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+tr:nth-child(even) {
+    background: #f0f6ff;
+}
+
+tr:hover {
+    background: #e3eefd;
+    transition: background 0.2s;
+}
+
+/* Avatar styling */
+img {
+    border-radius: 50%;
+    border: 2px solid #1e90ff;
+    background: #fff;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(30,144,255,0.10);
+}
+
+/* Center the avatar and surround it with buttons */
+#avatarImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+/* Make the profile picture bigger and styled */
+#avatarImage img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid #1e90ff;
+    background: #fff;
+    object-fit: cover;
+    box-shadow: 0 4px 24px rgba(10,61,145,0.18);
+    margin-bottom: 18px;
+}
+
+/* Button group around avatar */
+.avatar-btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: -40px; /* Pull buttons up closer to avatar */
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Style for buttons around avatar */
+.avatar-btn-group button {
+    background: linear-gradient(90deg, #0a3d91 60%, #1e90ff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(10,61,145,0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    outline: none;
+    cursor: pointer;
+}
+
+.avatar-btn-group button:hover,
+.avatar-btn-group button:focus {
+    background: linear-gradient(90deg, #1e90ff 60%, #0a3d91 100%);
+    box-shadow: 0 4px 16px rgba(10,61,145,0.18);
+    transform: scale(1.08);
+}
+
+/* Button styling */
+button {
+    background: linear-gradient(90deg, #0a3d91 60%, #1e90ff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 12px 28px;
+    margin: 10px 8px 0 0;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(10,61,145,0.10);
+    outline: none;
+}
+
+button:hover, button:focus {
+    background: linear-gradient(90deg, #1e90ff 60%, #0a3d91 100%);
+    box-shadow: 0 4px 16px rgba(10,61,145,0.18);
+}
+
+/* Input fields */
+input[type="text"], input[type="email"], input[type="file"] {
+    padding: 12px;
+    border: 1.5px solid #1e90ff;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    width: 100%;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background: #f9faff;
+    color: #111;
+    transition: border 0.2s;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="file"]:focus {
+    border: 1.5px solid #0a3d91;
+    outline: none;
+}
+
+input[type="file"] {
+    padding: 6px 0;
+    background: none;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #0a3d91;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+form {
+    background: #f0f6ff;
+    padding: 24px 18px 18px 18px;
+    border-radius: 14px;
+    margin: 30px auto 0 auto;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 8px rgba(30,144,255,0.10);
+}
+
+/* Contact card style for mobile look */
+.contact-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(30,144,255,0.10);
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    transition: box-shadow 0.2s;
+}
+
+.contact-card:hover {
+    box-shadow: 0 4px 16px rgba(10,61,145,0.18);
+    background: #e3eefd;
+}
+
+.contact-avatar {
+    margin-right: 16px;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-info h5 {
+    margin: 0 0 4px 0;
+    color: #0a3d91;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.contact-info span {
+    color: #222;
+    font-size: 0.98rem;
+    display: block;
+}
+
+/* Center avatar and form fields */
+.profile-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+#avatarImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+#avatarImage img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid #1e90ff;
+    background: #fff;
+    object-fit: cover;
+    box-shadow: 0 4px 24px rgba(10,61,145,0.18);
+    margin-bottom: 18px;
+}
+
+.profile-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+    gap: 12px;
+}
+
+.profile-fields label {
+    align-self: flex-start;
+}
+
+.profile-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 18px;
+}
+
+.profile-buttons button {
+    min-width: 120px;
+}
+
+@media (max-width: 600px) {
+    #main-container, .main-container, form, #table {
+        max-width: 98vw;
+        padding: 10px;
+    }
+    th, td {
+        padding: 8px 4px;
+        font-size: 0.95rem;
+    }
+    button {
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+    .contact-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    .contact-avatar {
+        margin: 0 0 10px 0;
+    }
+    #avatarImage img {
+        width: 90px;
+        height: 90px;
+    }
+    .avatar-btn-group button {
+        width: 44px;
+        height: 44px;
+        font-size: 1rem;
+    }
+    .avatar-btn-group {
+        gap: 10px;
+        margin-top: -28px;
+    }
+    #avatarImage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+    #avatarImage img {
+        width: 90px;
+        height: 90px;
+    }
+    .profile-fields {
+        max-width: 98vw;
+    }
+    .profile-buttons button {
+        min-width: 90px;
+        font-size: 0.95rem;
+    }
+}
